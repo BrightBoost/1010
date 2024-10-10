@@ -1,0 +1,5 @@
+<div>
+    <h1>Angular Input and Output</h1>
+    <app-child [childMessage]="parentMessage" (messageEvent)="receiveMessage($event)"></app-child>
+    <p>Message from child: {{ childMessage }}</p>
+</div>
