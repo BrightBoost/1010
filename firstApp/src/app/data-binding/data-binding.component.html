@@ -1,0 +1,28 @@
+<div class="container">
+    <h1>{{ title }}</h1>
+
+    <h2>1 way bindng</h2>
+    <p>The name entered is: {{ name }}</p>
+
+    <h2>2 way binding</h2>
+    <input [(ngModel)]="name" placeholder="Enter your name" />
+
+    <h2>Event binding</h2>
+    <button (click)="updateGreeting()">Greet</button>
+    <p>{{ greeting }}</p>
+
+    <h2>If Example</h2>
+    <button (click)="showHello = !showHello">{{ showHello ? 'Yes' : 'No' }}</button>
+    @if (showHello) {
+    <h2>Hello</h2>
+    }
+    @else {
+    <h2>Goodbye</h2>
+    }
+
+    @for (item of items; track item) {
+    <p>{{ item }}</p>
+    }
+
+
+</div>
